@@ -1,0 +1,250 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: sans-serif;
+}
+section {
+    height: 100vh;
+    width: 100%;
+}
+h2 {
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    width: 90%;
+    margin:0 auto;
+    z-index: 999;
+}
+nav a {
+    color: whitesmoke;
+    text-decoration: none !important;
+    font-size: 1.2em;
+}
+
+.main {
+    width: 90%;
+    margin: 0 auto;
+    height: auto;
+    color: whitesmoke;
+}
+@keyframes rotating {
+    from {
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -ms-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+.logo {
+    height: 20em;
+    width: 20em;
+    margin: 5em auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: rotating 3s linear infinite;
+}
+
+.cover {
+    height: 100vh;
+    width: 100%;
+}
+
+#lit {
+    position: absolute;
+    font-size: 2em;
+    right: -5px;
+    top:-10px;
+}
+
+.coolStyle {
+    background-image:url('../assets/weather.jpg');
+    background-size:cover;
+    background-position:0 100%;
+    background-repeat:no-repeat;
+}
+.warmStyle {
+    background-image:url('../assets/weather2.jpg');
+    background-size:cover;
+    background-position:0 100%;
+    background-repeat:no-repeat;
+}
+
+.weather__input::placeholder {
+    color: rgba(255, 255, 255,0.8);
+}
+.weather__input {
+    background: transparent;
+    width: 100%;
+    border: 1px solid rgba(224, 224, 224,0.9);
+    padding:0.3em 0.5em;
+    outline: none;
+    font-size: 1em;
+    color: rgba(255, 255, 255,0.8);
+    letter-spacing: 0.09em;
+}
+
+.weather__container {
+    background:rgb(255, 250, 250,0.1);
+    opacity: 0.9;
+    padding: 1em 0.5em;
+    border-radius: 0.2em;
+    box-shadow: 3px 6px 6px -1px rgba(0,0,0,0.2);
+-webkit-box-shadow: 3px 6px 6px -1px rgba(0,0,0,0.2);
+-moz-box-shadow: 3px 6px 6px -1px rgba(0,0,0,0.2);
+}
+
+.data {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.data span {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: rgba(255, 255, 255,0.9);
+}
+
+.data img {
+    height: 3em;
+    width: 3em;
+    margin: 0 1em;
+}
+
+.load {
+    color: white;
+    font-style: italic;
+    text-align: center;
+}
+
+/* todo section */
+.todo__section {
+    background: #040a21;
+}
+
+.input__container {
+    width: 100%;
+    position: relative;
+}
+.input__container input{
+    width: 100%;
+    height: 2.5em;
+    padding: 0.5em;
+    position: relative;
+    border-radius: 0.12em;
+    border: none;
+    outline: none;
+    color: #535355;
+}
+.input__container i {
+    position: absolute;
+    top:15%;
+    right: 1%;
+    height:100%;
+    width: 1em;
+    cursor: pointer;
+}
+
+.input__container i:first-child{
+    color: #562fd2;
+}
+
+.input__container i:last-child {
+    color: #68b6ba;
+}
+
+.todo__item {
+    width:100%;
+    background: #562fd2;
+    height: 2.5em;
+    padding: 0.5em;
+    border: none;
+    border-radius: 0.15em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    margin-top: 0.6em;
+}
+
+.todo__item.complete {
+    background:#1fb36d;
+}
+
+.todo__img {
+    display: block;
+    margin:0 0 1em 40%;
+    height:5em !important;
+    width:5em !important;
+}
+
+.todo__item div {
+    width: 79%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+.todo__item div .check {
+    font-size:1em;
+    margin-right:0.3em;
+    cursor: pointer;
+    color: yellow;
+}
+
+.todo__item .buttons {
+    width: 21%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buttons button {
+    background: transparent;
+    border: none;
+    padding:5px;
+}
+
+.buttons button:first-child {
+    color: #68b6ba;
+}
+.buttons button:last-child {
+    color: #cea2a8;
+}
+
+
+
+.board {
+    display: grid;
+    height: 16.5em;
+    grid-template: repeat(3,auto)/repeat(3,auto);
+    margin: 0;
+    border: 2px solid white;
+    border-radius:4px;
+}
+
+.board button {
+    border: 1px solid white;
+    font-size:30px;
+    background:transparent;
+    padding: 0;
+    font-weight: bold;
+    color: white;
+}
